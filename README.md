@@ -9,13 +9,15 @@ and I have extracted the data from the incidents pdf using list of lists and usi
 How to install Packages
 I have used pipenv to install all the packages that are required for this project
 Packages used are
--> urllib
-->PyPDF4
-->sqlite3
-->pytest
-->re
-->tempfile
-->argparse
+<ul>
+	<ol> urllib </ol>
+	<ol> PyPDF4 </ol>
+	<ol> sqlite3 </ol>
+	<ol> pytest </ol>
+	<ol> re </ol>
+	<ol> tempfile </ol>
+	<ol> argparse</ol>
+	</ul>
 the syntax for installing some of the libraries using pipenv is 
 <b> pipenv install <packagename> </b>
 <h3> Project0 Python files </h3>

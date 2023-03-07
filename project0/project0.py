@@ -35,11 +35,18 @@ def extractincidents(incident_data):
         data_list = re.findall(pattern, page1, re.DOTALL)
         insert_list = []
         for data in data_list:
-        
+
     # Combine the lines into a single string
-        
-            row = [data[0], data[1], data[2], data[3], data[4]]
-            #print(row)
+            address_lines = data[3].split('\n')
+            #print(address_lines)
+            if len(address_lines) > 1:
+                address_lines = address_lines[0]
+                del address_lines[2]
+                print(address_lines[1])
+            address = address_lines[0].strip() if address_lines[0] else ''
+            #print(address)
+            row = [data[0], data[1], data[2], address, data[4]]
+            print(row)
             insert_list.append(row)
     #exception which handles any extra column that is present in the pdf 
     if(len(row)) > 5:

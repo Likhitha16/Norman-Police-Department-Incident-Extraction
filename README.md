@@ -1,5 +1,5 @@
 
-				Norman Police Incidents Summary
+				            Norman Police Incidents Summary
 
 <h1> Author : Chandra Likhitha Chopparapu </h1>
 <h3>About the Project <h3> : 
@@ -67,7 +67,8 @@ And all the above used methods and their body is completed in the project0.py fi
 There are some bugs that can occur while doing this. The url cannot be extracted if there is any small change in the url. So make sure to use the correct url 
 while passing the url in the command line.
 		
-		<ol> <b> extractincidents(incident_data) </b> </ol> : in this method I have extracted the raw data and arranged into a list where data of every column is separated into a row and those rows are placed into a list . Then I have used regex to separate each columns based on the data and time . Also I have combined the data and time into a single string and the rest of the data into separate strings based on the rest of the data. After doing this there is a list of lists that has been created to store each and every row of the incident pdf.
+		<ol> <b> extractincidents(incident_data) </b> </ol> : 
+		In this method I have extracted the raw data and arranged into a list where data of every column is separated into a row and those rows are placed into a list . Then I have used regex to separate each columns based on the data and time . Also I have combined the data and time into a single string and the rest of the data into separate strings based on the rest of the data. After doing this there is a list of lists that has been created to store each and every row of the incident pdf. 
 		
 		<ol> <b> Bugs and Assumptions </b> </ol>
 		
@@ -75,17 +76,25 @@ While I was extracting this data there was a issue where all the dates and time 
 		
 		<ol> <b> createdb() </b> </ol> : This method uses sqlite3 package which helps to create a database with the name 'normanpd.db' create a db connection and after creating if we go out of the folder and rin a 'ls' command which lists out all the files then there will be a file created with 'normanpd.db' along with all the files.
 		
-		<ol > <b> populatedb() </b> </ol> : This method is used to insert data that we have extracted into a database with the name that we have created using the above method which is 'normanpd.db" and use the INSERT statement from the sql and insert the data from the extractedtext and pass into the database.
+		<ol > <b> populatedb() </b> </ol> : 
+		This method is used to insert data that we have extracted into a database with the name that we have created using the above method which is 'normanpd.db" and use the INSERT statement from the sql and insert the data from the extractedtext and pass into the database.
 Bugs and Assumptions : while populating the db if there are some errors that we may face which is because of the errors in the data extraction part. so if we do the extractincidents part correctly then data will be inserted into the database accurately.
 		
-		<ol> <b> status() </b> </ol> : it prints out the number of nature of incidents and also counts everything and prints the data of the number of nature of incidents and count of the number of times it appears in the command line.
+		<ol> <b> status() </b> </ol> : 
+		It prints out the number of nature of incidents and also counts everything and prints the data of the number of nature of incidents and count of the number of times it appears in the command line.
  
 <h3> Pytests(Testcases) </h3>
-		<ol> <b> test_fetchincidents() </b> </ol> : this method is used to check if the incidents are fetched correctly when the url is passed into the method.
-		<ol> <b> test_extractincidents() </b> </ol> : this method is used to check if the the data extracted correctly is inserted into the list of lists and all the columns are also distinguishable. If this works then all the test would be passed.
-<b> test_createdb() </b> : this method checks if the db name matches with the name of the db that we have passed as a url. and if it matches then the test would be passed successfully.
-<b> test_populatedb() </b> : this method is used to check if the data is inserted properly and all the columns are separated properly and if this is true then the test is passed . This test checks if the data passed is correct .
-<b> test_status() </b> : this tests are used to check if the nature of the incidents are printing correctly or not . And if everything is printed correctly then the test is passed .
+		<ol> <b> test_fetchincidents() </b> </ol> : T
+		This method is used to check if the incidents are fetched correctly when the url is passed into the method.
+		<ol> <b> test_extractincidents() </b> </ol> : 
+		This method is used to check if the the data extracted correctly is inserted into the list of lists and all the columns are also distinguishable. If this works then all the test would be passed.
+		<ol> <b> test_createdb() </b> </ol> : 
+		This method checks if the db name matches with the name of the db that we have passed as a url. and if it matches then the test would be passed successfully.
+		<ol> <b> test_populatedb() </b> </ol> : this method is used to check if the data is inserted properly and all the columns are separated properly and if this is true then the test is passed . This test checks if the data passed is correct .
+		<ol> <b> test_status() </b> </ol> : this tests are used to check if the nature of the incidents are printing correctly or not . And if everything is printed correctly then the test is passed .
+		
 We have to run all these tests in the main project folder .
+		
 To run the tests use this command : pipenv run python -m pytest.
+		
 If all the tests are passed it shows that All tests are passed message in the command line 
